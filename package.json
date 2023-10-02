@@ -1,0 +1,21 @@
+{
+  "name": "devops-dashboard",
+  "description": "EVS DevOps Dashboard",
+  "version": "1.1.0",
+  "author": {
+    "name": "skitsanos",
+    "email": "evi.kravchenko@cellebrite.com"
+  },
+  "scripts": {
+    "dev": "bun run --hot src/index.ts",
+    "compile": "bun build src/index.ts --compile --outfile dist/api-server"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.10",
+    "hono": "^3.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "bun-types": "^1.0.3"
+  }
+}
