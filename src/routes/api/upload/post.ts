@@ -1,8 +1,10 @@
 import {Context} from 'hono';
+import response from '@/utils/response';
+import Logger from '@/utils/logger';
 
 export default async (ctx: Context) =>
 {
-    console.log('got file');
+    Logger.log('got file');
     const {req} = ctx;
 
     const data = await req.formData();
@@ -11,8 +13,8 @@ export default async (ctx: Context) =>
     if (image instanceof File)
     {
         // use image.stream(); to stream the file to disk or a cloud provider like GCS, S3 etc
-        console.log('streaming file');
+        Logger.log('streaming file');
     }
 
-    return ctx.jsonT({message: 'hello there'});
+    return ctx.jsonT(response.result({message: 'hello there'}));
 };
