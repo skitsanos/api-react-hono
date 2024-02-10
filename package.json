@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "dayjs": "^1.11.10",
-    "hono": "^3.7.3"
+    "hono": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.8.0",
